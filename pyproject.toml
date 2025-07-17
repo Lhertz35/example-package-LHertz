@@ -6,8 +6,11 @@ build-backend = "hatchling.build"
 
 [project] 
 name = "example_package_lhertz" 
-version = "0.1.0" 
 dependencies = ["numpy"]
+dynamic = ["version"]
 
 [project.optional-dependencies]
 test = ["pytest"]
+
+[tool.hatch]
+version.path = "src/example_package_lhertz/__init__.py"
